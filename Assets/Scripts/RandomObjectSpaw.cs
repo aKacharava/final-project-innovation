@@ -7,11 +7,11 @@ public class RandomObjectSpaw : MonoBehaviour
     [SerializeField]
     GameObject spawnObject;
 
-    float minLookDistance = 1f;
-    float maxLookDistance = 3.5f;
+    float minSpawnDistance = 0.3f;
+    float maxSpawnDistance = 1f;
     int spawnCount = 0;
 
-    ///Vector3 
+    Vector3 spawnRadius;
 
 
     void Start()
@@ -23,7 +23,8 @@ public class RandomObjectSpaw : MonoBehaviour
     {
         if (spawnCount < 3)
         {
-            Instantiate(spawnObject, this.transform.position, Quaternion.identity);
+            spawnRadius = new Vector3(Random.Range(minSpawnDistance, maxSpawnDistance), 0, Random.Range(minSpawnDistance, maxSpawnDistance));
+            Instantiate(spawnObject, this.transform.position + spawnRadius, Quaternion.identity);
             spawnCount++;
         }
     }
