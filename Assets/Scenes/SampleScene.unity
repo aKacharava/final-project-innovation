@@ -442,7 +442,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arPlaneManager: {fileID: 248141246}
-  spawnedObject: {fileID: 7320021138897719473, guid: b90a8c0314becf5428f66412eac3c31e,
+  spawnedObject: {fileID: 2508254148495881697, guid: dfab0dda00493204caa3de85c88383a8,
     type: 3}
 --- !u!1 &387446407
 GameObject:
@@ -670,8 +670,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 393f782915ff7f34f8a8b5778fd383a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnObject: {fileID: 7320021138897719473, guid: b90a8c0314becf5428f66412eac3c31e,
-    type: 3}
+  spawnObject:
+  - {fileID: 7729999543694517796, guid: d6ac341fa35c0984496173cd34763101, type: 3}
+  - {fileID: 2508254148495881697, guid: dfab0dda00493204caa3de85c88383a8, type: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
