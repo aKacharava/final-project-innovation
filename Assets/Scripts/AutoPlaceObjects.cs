@@ -15,6 +15,7 @@ public class AutoPlaceObjects : MonoBehaviour
 
     private void Awake()
     {
+        Time.timeScale = 0;
         arPlaneManager = GetComponent<ARPlaneManager>();
         arPlaneManager.planesChanged += PlaneUpdate;
     }
