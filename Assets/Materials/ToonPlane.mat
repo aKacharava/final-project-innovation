@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: ToonPlane
-  m_Shader: {fileID: -6465566751694194690, guid: 770c459731295274f8c35cefd9a0679e,
+  m_Shader: {fileID: -6465566751694194690, guid: 0cf2aa9cf1b2afd45a033debad2cfb05,
     type: 3}
   m_ShaderKeywords: MAIN_LIGHT_CALCULATE_SHADOWS _MAIN_LIGHT_SHADOWS_CASCADE _SHADOWS_SOFT
   m_LightmapFlags: 4

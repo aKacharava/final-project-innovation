@@ -671,8 +671,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnObject:
+  - {fileID: 9206379584931932793, guid: 515fe2af6c8131f48a6f700accb5ba70, type: 3}
   - {fileID: 7729999543694517796, guid: d6ac341fa35c0984496173cd34763101, type: 3}
-  - {fileID: 2508254148495881697, guid: dfab0dda00493204caa3de85c88383a8, type: 3}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -701,7 +701,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -862,7 +862,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1701731750
 RectTransform:
   m_ObjectHideFlags: 0
