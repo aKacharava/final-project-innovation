@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
+
 public class RandomObjectSpaw : MonoBehaviour
 {
     [SerializeField]
@@ -13,8 +15,11 @@ public class RandomObjectSpaw : MonoBehaviour
 
     Vector3 spawnRadius;
 
+    AudioSource audioClip1;
+
     void Start()
     {
+        audioClip1 = GetComponent<AudioSource>();
         //spawnObject[0].GetComponent<Animator>().enabled = false;
         //spawnObject[1].GetComponent<Animator>().enabled = false;
         InvokeRepeating("SpawnObject", 7, 7);
@@ -25,7 +30,9 @@ public class RandomObjectSpaw : MonoBehaviour
         if (spawnCount < 5)
         {
             spawnRadius = new Vector3(Random.Range(minSpawnDistance, maxSpawnDistance), 0, Random.Range(minSpawnDistance, maxSpawnDistance));
+
             Instantiate(spawnObject[Random.Range(0, 2)], this.transform.position + spawnRadius, Quaternion.identity);
+            audioClip1.Play(0);
             spawnCount++;
         }
         //else if(spawnCount == 5)

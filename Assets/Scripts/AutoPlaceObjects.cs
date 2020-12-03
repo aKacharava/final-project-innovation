@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 
+[RequireComponent(typeof(AudioSource))]
+
 public class AutoPlaceObjects : MonoBehaviour
 {
     ///ARRaycastManager raycastManager;
@@ -12,6 +14,13 @@ public class AutoPlaceObjects : MonoBehaviour
 
     [SerializeField]
     GameObject spawnedObject;
+
+    AudioSource audioClip1;
+
+    private void Start()
+    {
+        audioClip1 = GetComponent<AudioSource>();
+    }
 
     private void Awake()
     {
@@ -25,6 +34,7 @@ public class AutoPlaceObjects : MonoBehaviour
         {
             ARPlane arPlane = args.added[0];
             Instantiate(spawnedObject, arPlane.transform.position, Quaternion.identity);
+            audioClip1.Play(0);
         }
     }
 }
