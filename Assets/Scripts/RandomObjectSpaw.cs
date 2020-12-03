@@ -7,8 +7,8 @@ public class RandomObjectSpaw : MonoBehaviour
     [SerializeField]
     GameObject[] spawnObject = new GameObject[2];
 
-    float minSpawnDistance = 1f;
-    float maxSpawnDistance = 3f;
+    float minSpawnDistance = 0.3f;
+    float maxSpawnDistance = 1.2f;
     int spawnCount = 0;
 
     Vector3 spawnRadius;
