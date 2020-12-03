@@ -7,10 +7,10 @@ using UnityEngine;
 public class RandomObjectSpaw : MonoBehaviour
 {
     [SerializeField]
-    GameObject spawnObject;
+    GameObject[] spawnObject = new GameObject[2];
 
-    float minSpawnDistance = 0.3f;
-    float maxSpawnDistance = 1f;
+    float minSpawnDistance = 1f;
+    float maxSpawnDistance = 3f;
     int spawnCount = 0;
 
     Vector3 spawnRadius;
@@ -20,17 +20,32 @@ public class RandomObjectSpaw : MonoBehaviour
     void Start()
     {
         audioClip1 = GetComponent<AudioSource>();
+        //spawnObject[0].GetComponent<Animator>().enabled = false;
+        //spawnObject[1].GetComponent<Animator>().enabled = false;
         InvokeRepeating("SpawnObject", 7, 7);
     }
 
     void SpawnObject()
     {
-        if (spawnCount < 3)
+        if (spawnCount < 5)
         {
             spawnRadius = new Vector3(Random.Range(minSpawnDistance, maxSpawnDistance), 0, Random.Range(minSpawnDistance, maxSpawnDistance));
-            Instantiate(spawnObject, this.transform.position + spawnRadius, Quaternion.identity);
+
+            Instantiate(spawnObject[Random.Range(0, 2)], this.transform.position + spawnRadius, Quaternion.identity);
             audioClip1.Play(0);
             spawnCount++;
         }
+        //else if(spawnCount == 5)
+        //{
+        //    PlayAnimation();
+        //    //Invoke("PlayAnimation", 3);
+        //    spawnCount++;
+        //}
+    }
+
+    void PlayAnimation()
+    {
+        spawnObject[0].GetComponent<Animator>().enabled = true;
+        spawnObject[1].GetComponent<Animator>().enabled = true;
     }
 }
